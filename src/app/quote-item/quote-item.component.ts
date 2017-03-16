@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class QuoteItemComponent implements OnInit {
 
   @Input() quote: any;
-  @Input() author: any;
 
   constructor() { }
 

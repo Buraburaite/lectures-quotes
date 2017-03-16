@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Quote Application';
+
+  quoteA = {
+    text: 'I love fries.',
+    author: 'Neil Armstrong'
+  }
+
+  quoteB = {
+    text: 'Anything is a dildo if you\'re brave enough',
+    author: 'The Internet'
+  }
 }
