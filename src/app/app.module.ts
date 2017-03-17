@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
+import { CounterService } from './my-services/counter.service';
 
 import { AppComponent } from './app.component';
 import { QuoteItemComponent } from './quote-item/quote-item.component';
@@ -13,6 +14,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { CountersComponent } from './counters/counters.component';
 import { MyCounterComponent } from './my-counter/my-counter.component';
+import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.component';
 
 const routes: Routes = [
   // http://localhost:4200/quotes
@@ -28,6 +30,8 @@ const routes: Routes = [
 
   { path: 'counters', component: CountersComponent },
 
+  { path: 'chuck', component: ChuckNorrisPageComponent },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
@@ -41,7 +45,8 @@ const routes: Routes = [
     ContactListComponent,
     ContactComponent,
     CountersComponent,
-    MyCounterComponent
+    MyCounterComponent,
+    ChuckNorrisPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
